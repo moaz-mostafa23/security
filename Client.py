@@ -10,7 +10,7 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect(('localhost', 8000))
 
 PU_server = client_socket.recv(2048)
-PU_server = serialization.loadapem_public_key(PU_server, backend=default_backend())
+PU_server = serialization.load_pem_public_key(PU_server, backend=default_backend())
 
 key = os.urandom(32)
 encrypted_key = PU_server.encrypt(
