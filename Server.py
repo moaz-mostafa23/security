@@ -3,7 +3,6 @@ from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import serialization, hashes
 from utils import message_handler, verify_password, hashPassword
 import json
-import signal
 import sys
 
 def load_user_db():

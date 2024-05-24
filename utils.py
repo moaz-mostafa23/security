@@ -3,7 +3,6 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.padding import PKCS7
 from cryptography.hazmat.primitives import hashes
 import binascii
-import re
 
 def message_handler(message, key: bytes):
     assert len(key) == 32, "Key must be 32 bytes long"
